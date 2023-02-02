@@ -1,0 +1,7 @@
+version: "3.8"
+
+services:
+  php:
+    image: php:8.2.2RC1-cli-alpine3.17
+    volumes:
+      - ./src:/app
