@@ -1,7 +1,15 @@
 version: "3.8"
 
 services:
+  composer:
+    image: composer/composer:latest
+    entrypoint: []
+    volumes:
+      - .:/app
+    working_dir: /app
   php:
     image: php:8.2.2RC1-cli-alpine3.17
+    entrypoint: []
+    working_dir: /app
     volumes:
-      - ./src:/app
+      - .:/app
